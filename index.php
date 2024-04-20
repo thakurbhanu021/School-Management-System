@@ -315,36 +315,101 @@
         </div>
         <div>
             <div class="container">
-                <div class="col-6">
-                    <div class="border rounded position-relative">
-                        <div class="p-4 text-center">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
+                <div class="row">
+                    <div class="col-6">
+                        <div class="border rounded position-relative">
+                            <div class="p-4 text-center">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
+                            </div>
+                            <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
                         </div>
-                        <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
+                        <div class="text-center mt-n2">
+                            <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
+                            <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
+                            <p><i>Designation</i></p>
+                        </div>
                     </div>
-                    <div class="text-center mt-n2">
-                        <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
-                        <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
-                        <p><i>Designation</i></p>
+                    <div class="col-6">
+                        <div class="border rounded position-relative">
+                            <div class="p-4 text-center">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
+                            </div>
+                            <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
+                        </div>
+                        <div class="text-center mt-n2">
+                            <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
+                            <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
+                            <p><i>Designation</i></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="border rounded position-relative">
-                        <div class="p-4 text-center">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
-                        </div>
-                        <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
-                    </div>
-                    <div class="text-center mt-n2">
-                        <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
-                        <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
-                        <p><i>Designation</i></p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <!-- Testimonials -->
+
+    <!-- footer  -->
+
+    <footer style="background:url(./assets/images/earth-11595_1280.jpg) center/cover no-repeat">
+        <div class="py-5" style="background: #00000088;">
+            <div class="container-fluid">
+                <div class="row text-light">
+                    <div class="col-lg-4">
+                        <h5>Useful Links</h5>
+                        <ul class="fa-ul ml-4">
+                            <li> <a href="#" class="text-light"> <i class="fa-li fa fa-angle-right"></i> Link </a> </li>
+                            <li> <a href="#" class="text-light"> <i class="fa-li fa fa-angle-right"></i> Link </a> </li>
+                            <li> <a href="#" class="text-light"> <i class="fa-li fa fa-angle-right"></i> Link </a> </li>
+                            <li> <a href="#" class="text-light"> <i class="fa-li fa fa-angle-right"></i> Link </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Social Presence</h5>
+                        <div>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook-f fa-stack-1x fa-inverse text-dark"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse text-dark"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse text-dark"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse text-dark"></i>
+                            </span>
+                            <span class="fa fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube fa-stack-1x fa-inverse text-dark"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>Subscribe Now</h5>
+                        <form action="#">
+                            <div class="form-outline mt-4" data-mdb-input-init>
+                                <input type="email" id="email2" class="form-control" />
+                                <label class="form-label" for="email2">Your Email</label>
+                            </div>
+                            <button class="btn btn-primary btn-sm mt-4">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="py-2 bg-dark text-light">
+        <div class="container-fluid">
+            Copyright 2025 All Right Reserved. <a href="#" class="text-light">School management System</a>
+        </div>
+    </section>
+    <!-- footer  -->
 
 
     <!-- MDB -->
