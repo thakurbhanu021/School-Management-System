@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/18481aee4b.js" crossorigin="anonymous"></script>
+
+    <style>
+        .btn {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -150,8 +157,28 @@
     </div>
     <!-- Hero Section -->
 
-    <!-- Course Section -->
+    <!-- About us -->
     <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <h2 class="">About <br>School Management System</h2>
+                    <div class="pr-5">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, tenetur aut voluptatem ipsum voluptate quisquam!</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam accusamus autem nisi, unde sit quae, fugit soluta, adipisci ad dolorem omnis molestias velit error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nam praesentium earum officia veritatis ex, iure, deleniti unde eligendi maiores dolores deserunt voluptatibus quia obcaecati quam explicabo ut magnam facere exercitationem quaerat, consequatur hic.</p>
+                    </div>
+                    <a href="about-us.php" class="btn btn-primary">Know more</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./assets/images/undraw_Co-working_re_w93t-removebg-preview.png" alt="about" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About us -->
+
+    <!-- Course Section -->
+    <section class="py-5 bg-light">
         <div class="text-center mb-5">
             <h2 class="">Our Courses</h2>
             <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, aspernatur?</p>
@@ -181,33 +208,149 @@
     </section>
     <!-- Course Section -->
 
+    <!-- Teacher Section -->
     <section class="py-5">
         <div class="text-center mb-5">
             <h2 class="">Our Teachers</h2>
             <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, aspernatur?</p>
         </div>
-        <div class="container">
+        <div class="container pt-5">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img">
+                <?php for ($i = 0; $i < 4; $i++) { ?>
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="col-7 position-absolute" style="top:-50px;">
+                                <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="mw-100 border rounded-circle">
+                            </div>
+                            <div class="card-body pt-5 mt-5">
+                                <h4 class="card-title mt-3">John Doe</h4>
+                                <p class="">
+                                    <i class="fa-sharp fa-solid fa-star text-warning"></i>
+                                    <i class="fa-sharp fa-solid fa-star text-warning"></i>
+                                    <i class="fa-sharp fa-solid fa-star text-warning"></i>
+                                    <i class="fa-sharp fa-solid fa-star text-warning"></i>
+                                    <i class="fa-sharp fa-solid fa-star text-warning"></i>
+                                </p>
+                                <p class="card-text">
+                                    <b>Course: </b> 5 <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+        </div>
+    </section>
+    <!-- Teacher Section -->
+
+    <!-- Achievement Section -->
+
+    <section class="py-5" style="background:#3923a7; color:white;">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 pr-5">
+                        <h2>Acheivements</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dicta dolorem deleniti pariatur omnis minus illum reiciendis nam officiis quam, accusamus aliquid libero commodi voluptates?</p>
+
+                        <img src="./assets/images/undraw_Co-working_re_w93t-removebg-preview.png" alt="img" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 my-auto">
+                        <div class="row">
+                            <div class="col-lg-6  mb-4">
+                                <div class="border rounded p-3">
+                                    <div class="card-body text-center">
+                                        <span><i class="fa-sharp fa-solid fa-graduation-cap fa-2x  text-warning"></i></span>
+                                        <h2 class="my-2 font-weight-bold h1 text-">334</h2>
+                                        <hr class="border-warning">
+                                        <h4>Graduates</h4>
+                                    </div>
                                 </div>
-                                <div class="col-8"></div>
+                            </div>
+                            <div class="col-lg-6  mb-4">
+                                <div class="border rounded p-3">
+                                    <div class="card-body text-center">
+                                        <span><i class="fa-sharp fa-solid fa-graduation-cap fa-2x  text-warning"></i></span>
+                                        <h2 class="my-2 font-weight-bold h1 text-">334</h2>
+                                        <hr class="border-warning">
+                                        <h4>Graduates</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  mb-4">
+                                <div class="border rounded p-3">
+                                    <div class="card-body text-center">
+                                        <span><i class="fa-sharp fa-solid fa-graduation-cap fa-2x  text-warning"></i></span>
+                                        <h2 class="my-2 font-weight-bold h1 text-">334</h2>
+                                        <hr class="border-warning">
+                                        <h4>Graduates</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  mb-4">
+                                <div class="border rounded p-3">
+                                    <div class="card-body text-center">
+                                        <span><i class="fa-sharp fa-solid fa-graduation-cap fa-2x  text-warning"></i></span>
+                                        <h2 class="my-2 font-weight-bold h1 text-">334</h2>
+                                        <hr class="border-warning">
+                                        <h4>Graduates</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+
+    <!-- Achievement Section -->
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="text-center mb-5">
+            <h2 class="">What People Says</h2>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, aspernatur?</p>
+        </div>
+        <div>
+            <div class="container">
+                <div class="col-6">
+                    <div class="border rounded position-relative">
+                        <div class="p-4 text-center">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
+                        </div>
+                        <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
+                    </div>
+                    <div class="text-center mt-n2">
+                        <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
+                        <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
+                        <p><i>Designation</i></p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="border rounded position-relative">
+                        <div class="p-4 text-center">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi quam repellendus nam nesciunt unde eligendi, iusto, iste officia, doloribus aut voluptatum quidem officiis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate ex nisi velit mollitia at nostrum laboriosam vero atque dolorem!
+                        </div>
+                        <i class="fa fa-quote-left fa-3x position-absolute" style="top:0.5rem; left:0.5rem; opacity:0.2;"></i>
+                    </div>
+                    <div class="text-center mt-n2">
+                        <img src="./assets/images/undraw_Reading_book_re_kqpk-removebg-preview.png" alt="img" class="rounded-circle border" width="100px" height="100px">
+                        <h6 class="mb-0 mt-3">Bhanu Pratap</h6>
+                        <p><i>Designation</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
 
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+
 </body>
 
 </html>
