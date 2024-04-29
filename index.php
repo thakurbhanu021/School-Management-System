@@ -78,7 +78,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                         <li>
-                            <a class="dropdown-item" href="#">My profile</a>
+                            <a class="dropdown-item" href="./admin/dashboard.php">My profile</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Settings</a>
