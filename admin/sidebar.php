@@ -237,13 +237,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./classes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Classes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./courses.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Courses</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./sections.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sections</p>
                 </a>
