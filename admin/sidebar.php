@@ -208,19 +208,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./user.accounts.php?user=student" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Students</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./user.accounts.php?user=parent" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Parents</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./user.accounts.php?user=lbrarian" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Librarian</p>
                 </a>
