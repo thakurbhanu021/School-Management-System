@@ -3,6 +3,20 @@
 
 <?php include('./sidebar.php') ?>
 
+<?php
+if (isset($_POST['submit'])) {
+    $title = $_POST['title'];
+    $sections = implode(',', $_POST['section']);
+
+    // echo '<pre>';
+    // print_r( $_POST );
+    // echo '</pre>';
+
+    mysqli_query($db_conn, "INSERT INTO classes (title,section) VALUE ('$title', '$sections')") or die('DB Error');;
+}
+
+?>
+
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -34,7 +48,7 @@
                     </h3>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input type="text" name="title" placeholder="Title" required class="form-control">
@@ -46,23 +60,20 @@
                             $count = 1;
                             while ($sections = mysqli_fetch_object($query)) { ?>
                                 <div>
-                                    <label for="<?=$count?>">
-                                        <input type="checkbox" id='<?=$count?>' name="section[]" placeholder="Section" required>
+                                    <label for="<?= $count ?>">
+                                        <input type="checkbox" id='<?= $count ?>' name="section[]" value="<?= $sections->id ?>" placeholder="Section">
                                     </label>
-                                    <?=$sections->title?>
+                                    <?= $sections->title ?>
                                 </div>
-                            <?php $count++; }
+                            <?php $count++;
+                            }
                             ?>
-
                         </div>
-                        <button class="btn btn-success">Submit</button>
+                        <button name='submit' class="btn btn-success">Submit</button>
                     </form>
                 </div>
-
             </div>
-
             <!-- /.row -->
-
 
         <?php  } else { ?>
             <!-- Info boxes -->
@@ -81,11 +92,36 @@
                             <thead>
                                 <tr>
                                     <th>S.No.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
+                                    <th>Title</th>
+                                    <th>Sections</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <?php
+                                $count = 1;
+                                $cla_query = mysqli_query($db_conn, 'SELECT * FROM classes');
+                                while ($class = mysqli_fetch_object($cla_query)) { ?>
+                                    <tr>
+                                        <td><?= $count; ?></td>
+                                        <td><?= $class->title ?></td>
+                                        <td><?php
+                                                $sections = explode(',',$class->section);
+                                                // print_r($sections);
+                                                foreach($sections as $section) {
+                                                    $sec_query= mysqli_query($db_conn, 'SELECT * FROM sections WHERE id = '.$section.'');
+                                                    $sec = mysqli_fetch_object($sec_query);
+                                                    echo $sec->title . '<br>';
+                                                };
+                                            ?></td>
+                                        <td></td>
+                                    </tr>
+
+                                <?php $count++;
+                                }
+                                ?>
+                            </tbody>
+
                         </table>
                     </div>
                 </div>

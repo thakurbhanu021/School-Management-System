@@ -3,6 +3,17 @@
 
 <?php include('./sidebar.php') ?>
 
+<?php
+    if(isset($_POST['submit'])) {
+        $title = $_POST['title'];
+
+        mysqli_query($db_conn, "INSERT INTO sections (title) VALUE ('$title')") OR die('saccadv');;
+    } else{
+
+    }
+
+?>
+
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -24,78 +35,67 @@
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
-        <?php
-        if (isset($_REQUEST['action'])) { ?>
-            <!-- Info boxes -->
-            <div class="card">
-                <div class="card-header py-2">
-                    <h3 class="card-title">
-                        Add New Section
-                    </h3>
-                </div>
-                <div class="card-body">
-                    <form action="">
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" name="title" placeholder="Title" required class="form-control">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Info boxes -->
+                <div class="card">
+                    <div class="card-header py-2">
+                        <h3 class="card-title">
+                            Classes
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive bg-white">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>S.No.</th>
+                                        <th>Title</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $count = 1;
+                                    $query = mysqli_query($db_conn, 'SELECT * FROM sections');
+                                    while ($sections = mysqli_fetch_object($query)) { ?>
+                                        <tr>
+                                            <td><?= $count; ?></td>
+                                            <td><?= $sections->title ?></td>
+                                            <td></td>
+                                        </tr>
+
+                                    <?php $count++;
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="form-group">
-                            <label for="section">Section</label>
-                            <?php
-                            $query = mysqli_query($db_conn, 'SELECT * FROM sections');
-                            $count = 1;
-                            while ($sections = mysqli_fetch_object($query)) { ?>
-                                <div>
-                                    <label for="<?=$count?>">
-                                        <input type="checkbox" id='<?=$count?>' name="section[]" placeholder="Section" required>
-                                    </label>
-                                    <?=$sections->title?>
-                                </div>
-                            <?php $count++; }
-                            ?>
-
-                        </div>
-                        <button class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-
-            </div>
-
-            <!-- /.row -->
-
-
-        <?php  } else { ?>
-            <!-- Info boxes -->
-            <div class="card">
-                <div class="card-header py-2">
-                    <h3 class="card-title">
-                        Classes
-                    </h3>
-                    <div class="card-tools">
-                        <a href="?action=add-new" class="btn btn-primary btn-xs"><i class="fa fa-plus me-2"></i> Add New</a>
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive bg-white">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>S.No.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                        </table>
+                <!-- /.row -->
+            </div>
+            <div class="col-lg-4">
+                <!-- Info boxes -->
+                <div class="card">
+                    <div class="card-header py-2">
+                        <h3 class="card-title">
+                            Add New Section
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" placeholder="Title" required class="form-control">
+                            </div>
+                            <button name="submit" class="btn btn-success float-right">Submit</button>
+                        </form>
                     </div>
                 </div>
-
+                <!-- /.row -->
             </div>
-
-            <!-- /.row -->
-        <?php }
-        ?>
-
+        </div>
     </div><!--/. container-fluid -->
 </section>
 <?php include('./footer.php') ?>
