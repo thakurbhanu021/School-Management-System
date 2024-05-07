@@ -1,8 +1,6 @@
 <?php include('../includes/config.php') ?>
 <?php include('./header.php') ?>
 
-<?php include('./sidebar.php') ?>
-
 <?php
 if (isset($_POST['submit'])) {
 
@@ -23,20 +21,23 @@ if (isset($_POST['submit'])) {
             // echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
-            echo "File is not an image.";
+            $_SESSION['failed_msg'] = 'File is not an image.';
+            // echo "File is not an image.";
             $uploadOk = 0;
         }
     }
 
     // Check if file already exists
     if (file_exists($target_file)) {
-        echo "Sorry, file already exists.";
+        $_SESSION['failed_msg'] = 'Sorry, file already exists.';
+        // echo "Sorry, file already exists.";
         $uploadOk = 0;
     }
 
     // Check file size
     if ($_FILES["thumbnail"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
+        $_SESSION['failed_msg'] = 'Sorry, your file is too large.';
+        // echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
 
@@ -45,27 +46,34 @@ if (isset($_POST['submit'])) {
         $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif"
     ) {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $_SESSION['failed_msg'] = 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.';
+        // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
-
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
+        // $_SESSION['failed_msg'] = 'Sorry, your file was not uploaded.';
         echo "Sorry, your file was not uploaded.";
         // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
             mysqli_query($db_conn, "INSERT INTO courses (name,category,duration,img) VALUE ('$name', '$category', '$duration', '$image')") or die(mysqli_error($db_conn));
+
+            $_SESSION['success_msg'] = 'File has been uploaded successfully';
+
+            header("location: ./courses.php");
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            $_SESSION['failed_msg'] = 'Sorry, there was an error uploading your file.';
+            // echo "Sorry, there was an error uploading your file.";
         }
     }
-    $_SESSION['success_msg'] = 'File has been uploaded successfully';
-
     // header('Location: ./courses.php');
-    header("location: ./courses.php");
 }
 ?>
+
+
+<?php include('./sidebar.php') ?>
+
 
 <!-- Content Header (Page header) -->
 <div class="content-header">
@@ -120,6 +128,14 @@ if (isset($_POST['submit'])) {
                             <input type="file" name="thumbnail" id="thumbnail" required>
                         </div>
                         <button name='submit' class="btn btn-success">Submit</button>
+                        <div class="form-group mt-2">
+                            <?php if (isset($_SESSION['failed_msg'])) { ?>
+                                <small class='text-danger ml-2' style='font-size:16px;'>
+                                    <?= $_SESSION['failed_msg'] ?>
+                                </small>
+                            <?php unset($_SESSION['failed_msg']);
+                            } ?>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -19,5 +19,5 @@
 
 $db_conn = mysqli_connect('localhost',  'root','', 'smp');
 
-
+session_start();
 ?>

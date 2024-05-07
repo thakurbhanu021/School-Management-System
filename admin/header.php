@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+
 
 $site_url = 'http://localhost/school%20mangement%20system/';
 
