@@ -1,3 +1,4 @@
+<?php include('./includes/config.php'); ?>
 <?php include('./header.php') ?>
 
 <!-- Navbar -->
@@ -172,6 +173,14 @@
 <!-- About us -->
 
 <!-- Course Section -->
+<style>
+        .course-images {
+            width: 100%;
+            height: 170px !important; 
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
 
 <section class="py-5 bg-light">
     <div class="text-center mb-5">
@@ -181,14 +190,17 @@
     <div class="container">
         <div class="row">
             <?php
-            for ($i = 0; $i < 8; $i++) { ?>
+            $query = mysqli_query($db_conn, 'SELECT * FROM courses ORDER BY id DESC LIMIT 0,8');
+            
+            // for ($i = 0; $i < 8; $i++) { 
+             while ($course = mysqli_fetch_object($query)) { ?>
                 <div class="col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="./assets/images/undraw_Co-working_re_w93t-removebg-preview.png" alt="" class="img-fluid rounded-top">
+                    <div class="card ">
+                        <img src="./dist/uploads/<?=$course->img ?>" alt="" class="img-fluid rounded-top course-images" >
                         <div class="card-body text-center">
-                            <b>Jr. Kindergarten</b>
+                            <b><?=$course->name ?></b>
                             <p class="card-text">
-                                <b>Duration: </b> 6 Months <br>
+                                <b>Duration: </b><?=$course->duration ?><br>
                                 <b>Price: </b> 40000/- Rs.
                             </p>
                             <button class="btn btn-block btn-primary">Enroll</button>
