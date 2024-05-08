@@ -201,6 +201,12 @@
                          </p>
                      </a>
                      <ul class="nav nav-treeview">
+                     <li class="nav-item">
+                             <a href="<?=$site_url ?>admin/user.accounts.php?user=counselor" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Conselor</p>
+                             </a>
+                         </li>
                          <li class="nav-item">
                              <a href="<?=$site_url ?>admin/user.accounts.php?user=teacher" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
@@ -220,7 +226,7 @@
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="<?=$site_url ?>admin/user.accounts.php?user=lbrarian" class="nav-link">
+                             <a href="<?=$site_url ?>admin/user.accounts.php?user=librarian" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Librarian</p>
                              </a>

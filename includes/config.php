@@ -19,5 +19,10 @@
 
 $db_conn = mysqli_connect('localhost',  'root','', 'smp');
 
+if(!$db_conn) {
+    echo 'Connection failed';
+    exit;
+}
+
 session_start();
 ?>
