@@ -57,5 +57,32 @@
     }());
 </script>
 
+<script>
+    jQuery(document).ready(function(){
+
+        jQuery('#class').change(function(){
+            // alert(jQuery(this).val());
+
+            jQuery.ajax({
+                url: 'ajax.php',
+                type: "POST",
+                data: {'class_id': jQuery(this).val()},
+                dataType: 'json',
+                success: function(response){
+                    if(response.count > 0) {
+                        jQuery('#section-container').show();
+                      
+                    } else {
+                        jQuery('#section-container').hide();
+                    }
+                    jQuery('#section').html(response.options);
+                  
+                    // console.log(typeof( response));
+                }
+            })
+        })
+    })
+</script>
+
 </body>
 </html>

@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
             <div class="col-sm-6">
                 <div class="d-flex">
                     <h1 class="m-0">Manage Accounts</h1>
-                    <a href="?user=<?= $_REQUEST['user'] ?>&action=add-new" class="btn btn-primary bt-sm ml-2">Add New</a>
+                    <a href="?user=<?= $_REQUEST['user'] ?>&action=add-new" class="btn btn-primary bt-sm ml-2">Add New</a> 
                 </div>
             </div><!-- /.col -->
             <div class="col-sm-6">
@@ -130,15 +130,11 @@ if (isset($_POST['submit'])) {
                                 <td> <?= $users->email ?></td>
                                 <td></td>
                             </tr>
-
                         <?php } ?>
                     </tbody>
-
                 </table>
-
             </div>
         <?php } ?>
-
         <!-- /.row -->
 
     </div><!--/. container-fluid -->

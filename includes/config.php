@@ -25,4 +25,6 @@ if(!$db_conn) {
 }
 
 session_start();
+
+include('functions.php');
 ?>

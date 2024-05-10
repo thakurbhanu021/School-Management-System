@@ -86,6 +86,16 @@ if (isset($_POST['submit'])) {
                         <a href="?action=add-new" class="btn btn-primary btn-xs"><i class="fa fa-plus me-2"></i> Add New</a>
                     </div>
                 </div>
+                <!-- <pre>
+                    <?php 
+                      $args = array(
+                        'type' => 'class',
+                        'status' => 'publish',
+                    );
+                    $classes = get_posts($args);
+                    ?>
+              
+                </pre> -->
                 <div class="card-body">
                     <div class="table-responsive bg-white">
                         <table class="table table-bordered">
@@ -100,19 +110,30 @@ if (isset($_POST['submit'])) {
                             <tbody>
                                 <?php
                                 $count = 1;
-                                $cla_query = mysqli_query($db_conn, 'SELECT * FROM classes');
-                                while ($class = mysqli_fetch_object($cla_query)) { ?>
+                                // $cla_query = mysqli_query($db_conn, "SELECT * FROM posts WHERE type = 'class'");
+                                // while ($class = mysqli_fetch_object($cla_query)) 
+                                $args = array(
+                                    'type' => 'class',
+                                    'status' => 'publish',
+                                );
+                                $classes = get_posts($args);
+                                foreach ($classes as $class) { ?>
                                     <tr>
                                         <td><?= $count; ?></td>
                                         <td><?= $class->title ?></td>
                                         <td><?php
-                                                $sections = explode(',',$class->section);
-                                                // print_r($sections);
-                                                foreach($sections as $section) {
-                                                    $sec_query= mysqli_query($db_conn, 'SELECT * FROM sections WHERE id = '.$section.'');
-                                                    $sec = mysqli_fetch_object($sec_query);
-                                                    echo $sec->title . '<br>';
-                                                };
+                                            $class_meta = get_metadata($class->id, 'section');
+                                            foreach($class_meta as $meta){
+                                                $section = get_post(array('id'=> $meta->meta_value));
+                                                echo $section->title;
+                                            }
+                                            // $sections = explode(',',$class->section);
+                                            // // print_r($sections);
+                                            // foreach($sections as $section) {
+                                            //     $sec_query= mysqli_query($db_conn, 'SELECT * FROM sections WHERE id = '.$section.'');
+                                            //     $sec = mysqli_fetch_object($sec_query);
+                                            //     echo $sec->title . '<br>';
+                                            // };
                                             ?></td>
                                         <td></td>
                                     </tr>

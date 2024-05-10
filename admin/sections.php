@@ -41,7 +41,7 @@
                 <div class="card">
                     <div class="card-header py-2">
                         <h3 class="card-title">
-                            Classes
+                            Sections
                         </h3>
                     </div>
                     <div class="card-body">
@@ -57,11 +57,18 @@
                                 <tbody>
                                     <?php
                                     $count = 1;
-                                    $query = mysqli_query($db_conn, 'SELECT * FROM sections');
-                                    while ($sections = mysqli_fetch_object($query)) { ?>
+                                    $args = array (
+                                        'type' => 'section',
+                                        'status' => 'publish',
+                                    );
+                                    $sections = get_posts( $args );
+                                    // $query = mysqli_query($db_conn, 'SELECT * FROM sections');
+                                    // while ($sections = mysqli_fetch_object($query)) 
+                                    foreach($sections as $section) 
+                                    { ?>
                                         <tr>
                                             <td><?= $count; ?></td>
-                                            <td><?= $sections->title ?></td>
+                                            <td><?= $section->title ?></td>
                                             <td></td>
                                         </tr>
 
