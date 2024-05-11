@@ -15,20 +15,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar brand -->
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo" loading="lazy" />
+                SMP
+                <!-- <img src="#" height="15" alt="MDB Logo" loading="lazy" /> -->
             </a>
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Team</a>
+                    <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#">Course</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Event</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
                         Dropdown link
                     </a>
@@ -43,7 +47,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <!-- Left links -->
         </div>
@@ -53,7 +57,8 @@
         <div class="d-flex align-items-center">
             <!-- Icon -->
             <!-- Notifications -->
-            <div class="dropdown">
+
+            <!-- <div class="dropdown">
                 <a data-mdb-dropdown-init class="link-secondary me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
                     <i class="fas fa-bell"></i>
                     <span class="badge rounded-pill badge-notification bg-danger">1</span>
@@ -69,7 +74,8 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
+
             <!-- Avatar -->
             <div class="dropdown ">
 
@@ -79,7 +85,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                         <li>
-                            <a class="dropdown-item" href="./admin/dashboard.php">My profile</a>
+                            <a class="dropdown-item" href="./admin/dashboard.php">Dashboard</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Settings</a>

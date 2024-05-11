@@ -104,6 +104,7 @@ if (isset($_POST['submit'])) {
                                     <th>S.No.</th>
                                     <th>Title</th>
                                     <th>Sections</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -135,6 +136,7 @@ if (isset($_POST['submit'])) {
                                             //     echo $sec->title . '<br>';
                                             // };
                                             ?></td>
+                                            <td><?= $class->publish_date ?></td>
                                         <td></td>
                                     </tr>
 

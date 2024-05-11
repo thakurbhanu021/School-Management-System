@@ -74,4 +74,10 @@ function data_output($query, $type = 'object')
     }
     return $output;
 }
+
+function get_user_data($user_id, $type = 'object'){
+    global $db_conn;
+    $query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE id = $user_id");
+    return data_output($query, $type);
+}
 ?>
